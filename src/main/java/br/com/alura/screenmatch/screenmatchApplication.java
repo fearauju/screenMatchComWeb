@@ -10,6 +10,5 @@ public class screenmatchApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(screenmatchApplication.class, args);
 	}
-
 }
 

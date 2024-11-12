@@ -15,7 +15,7 @@
 //
 //	private SerieRepository repositorio;
 //
-//	public static void main(String[] args) {
+//	public static void main(String[] args) implement CommandLineRunner{
 //		SpringApplication.run(screenmatchApplication.class, args);
 //	}
 //

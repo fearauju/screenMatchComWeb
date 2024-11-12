@@ -18,7 +18,7 @@ public class Principal {
     private ConsumoApi consumo = new ConsumoApi();
     private ConverteDados conversor = new ConverteDados();
     private final String ENDERECO = "https://www.omdbapi.com/?t=";
-    private final String API_KEY = "&apikey=6585022c";
+    private final String API_KEY = System.getenv("OMDB_API_KEY");
     private List<DadosSerie> dadosSeries = new ArrayList<>();
 
     private SerieRepository repositorio;
@@ -160,7 +160,6 @@ public class Principal {
         } else {
             System.out.println("Série não encontrada!");
         }
-
     }
 
     private void buscarSeriesPorAtor() {
@@ -223,6 +222,7 @@ public class Principal {
                             e.getNumeroEpisodio(), e.getTitulo(), e.getAvaliacao()));
         }
     }
+
     private void buscarEpisodiosDepoisDeUmaData(){
         buscarSeriePorTitulo();
         if(serieBusca.isPresent()){
